@@ -17,7 +17,7 @@ stringUtil是最常用到的工具类，它所提供的方法也是最多的，�
 */
 isNotEmpty反之。
 
-2. isBlank
+2. isBlank ^ isNotBlank
 
 /**
 *检查字符串是否是空白：null、空字符串或只有空白字符
