@@ -92,25 +92,24 @@ $template.head$screen_placeholder$template.foot
 template支持的所有指令有：
 
 1. 容器类，除了自身内容外，还可以再嵌套其它$template指令，会查找uisvr上对应的文件，并渲染。
-
-1.  $template.head
-2.  $template.foot
-3.  $template.page
+  1.  $template.head
+  2.  $template.foot
+  3.  $template.page
+  
 2. 引用具体的内容，不嵌套其它$tempalte指令，会查找uisvr上对应的文件，并渲染。
-
-1.  $template.page.js
-2.  $template.page.msg //使用场景未出现
-3.  $template.page.css
+  1.  $template.page.js
+  2.  $template.page.msg //使用场景未出现
+  3.  $template.page.css
+  
 3. 只返回内容，不会查找渲染uisvr上的文件。
-
-1.  $template.cssRef
-2.  $template.jsRef
+  1.  $template.cssRef
+  2.  $template.jsRef
+  
 4. 只传递参数，不进行渲染
-
-1.  $template.foot.setParameter(”foo”,”bar”)
-2.  $template.page.js.setParameter(”foo”,”bar”)
+  1.  $template.foot.setParameter(”foo”,”bar”)
+  2.  $template.page.js.setParameter(”foo”,”bar”)
+  
 template不存在远程调用，因为template所引用的资源都是uisvr中的，uisvr在所有的系统中都是公用的。
-
 tile和template唯一的区别就是，tile调用时需要向系统发送请求，而template不需要。
 
 uri-broker
