@@ -6,30 +6,26 @@
 </head>
 <body>
     <div class="c-month-container">
-        <input type="text" id="c-month-input" />
-        <div class="c-month-calendar" style="display:none;">
-            <ul class="c-calendar-month"></ul>
-            <ul class="c-calendar-year"></ul>
-            <div class="c-btns">
-                <button class="button button-primary">OK</button>
-                <button class="button">Cancel</button>  
-            </div>
-        </div>
+        <button id="requestBtn" class="button button-primary">OK</button>
     </div>
     
     <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
  
     <!-- script start --> 
     <script type="text/javascript">
-      jQuery.ajax({
-                    type: "post",
-                    url: url,
-                    data: opts,
-                    success: callback,
-                    error: function(jqXHR, textStatus, errorThrown){
-                        throw new Error(errorThrown);
-                    }
-                });  
+        jQuery('#requestBtn').click(function(){
+            jQuery.ajax({
+                type: "post",
+                url: "http://emcooperate.alipay.net/cooperate/saveEventNoticeInfo.json",
+                data: {"test":123, "fast": true},
+                success: function(res){
+                    console.log(res);
+                },
+                error: function(jqXHR, textStatus, errorThrown){
+                    throw new Error(errorThrown);
+                }
+            });  
+        });
     </script>
     <!-- script end -->
 </body>
