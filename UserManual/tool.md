@@ -177,9 +177,11 @@ lastIndexOf则是从字符串尾部开始查找。
 * @return 反转后的字符串，如果原字符串为null，则返回null
 */
 2. arrayUtil
+
 常用的方法：
-  1. isEmpty, isNotEmpty, isBlank, isNotBlank
-  2. defaultIfNull, defualtIfEmpty, defaultIfBlank
+
+  1. isEmpty, isNotEmpty, isBlank, isNotBlank  
+  2. defaultIfNull, defualtIfEmpty, defaultIfBlank  
   3. equals
   4. reverse
   5. indexOf, lastIndexOf
@@ -189,29 +191,36 @@ lastIndexOf则是从字符串尾部开始查找。
 3. array (不常用)
 
 4. objectUtil
+
   1. defaultIfNull
   2. equals
   3. hashCode
   同stringUtil类似，不多介绍了。
 
 5. dateUtil
+
 dateUtil处理Date对象的工具类，最常用的方法就是format，让时间对象按指定的格式输出，例如：
 $dateUtil.format(“Mon Aug 12 00:00:00 CST 2013”, “yyyy年MM月dd日”)
 //输出的结果就是2013年08月12日
 
 6. systemUtil
+
 systemUtil是取得有关系统信息的工具类。在vm中最常用的是获取服务器的名字$!systemUtil.hostInfo.namehost。
 
 7. requestUtil
+
 requestUtil只有一个方法，$requestUtil.getPreviousURL($request)，用于获取上次请求URL。
 
 8. requestFormUtil
+
 requestFormUtil也有一个方法$requestFormUtil.isRequestFromAIR($request)，主要用于判断请求的来源是不是航空版支付宝，现在好像也不常用。
 
 9. alipaystringUtil (不常用)
+
 10.  operationContext (不常用)
 
 11. math 
+
   add()	Addition
   sub()	Subtraction
   mul()	Multiplication
