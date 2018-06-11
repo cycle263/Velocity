@@ -1,4 +1,4 @@
-1. 转义和反转义
+* 1. 转义和反转义
 1.1 转义
 
 #set($a="<a>link</a>") => <a>link</a>
@@ -29,7 +29,7 @@
 
 注：#set($c="#SLITERAL($a)") 这样的代码是没有意义的，同#set($c=$a)效果是相同。
 
-2. 不常见的用法介绍
+* 2. 不常见的用法介绍
 2.1 array
 
 #set($a=[1,2,3])
@@ -58,7 +58,7 @@ $value
 
 $stringUtil.split返回的是字符串数组String[]，该数组无法通过$aa[0]或$aa.get(0)调用，只能通过#foreach遍历。
 
-3. #parse, $tile
+* 3. #parse, $tile
 #parse和$tile的区别：
 
 #parse是先插入后解析，$tile是先解析后插入。
@@ -71,7 +71,7 @@ $stringUtil.split返回的是字符串数组String[]，该数组无法通过$aa[
 
 貌似服务器上的antx.properties也是根据auto-config.xml生产的。
 
-4. vm中的组件，宏，变量
+* 4. vm中的组件，宏，变量
 4.1 vm中的组件
 
 vm中可以用的组件包括$tile, $template, uri-broker，具体可以参考：[SofaMVC使用文档-视图组件-v2|http://doc.alipay.net/pages/viewpage.action?pageId=10293362 ]
